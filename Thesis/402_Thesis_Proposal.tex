@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\setstretch{1.15}
+
+\begin{document}
+
+\begin{center}
+    \Large \textbf{Nonlinear Correlation and Stochastic Transport in Plasma Turbulence} \\[4pt]
+    \normalsize \emph{In satisfaction of the requirements for Math 402} \\
+    \normalsize \textbf{Supervisor:} Dr.\ Chijin Xiao (\emph{Physics and Engineering Physics}) \hspace{1cm} 
+\end{center}
+
+\section*{Overview}
+This project explores a nonlinear correlation method for studying turbulent transport in magnetically confined plasmas.
+Originally proposed by Ding \textit{et al.} (Phys.\ Rev.\ Lett.\ 79, 2458, 1997), the techniques analyze conditional cross-correlations between two time-resolved data series from measurement at two adjacent locations to study the direction of energy transfer between two nonlinearly coupled oscillators. Later studies (Bsharat \textit{et al.}, 2024; van Milligen \textit{et al.}, 2019) have shown that this approach can be linked to ideas from information theory and stochastic transport models such as continuous-time random walks. The aim of this work is to better understand the mathematical and physical basis of this method and how it can be applied to real plasma data.
+\section*{Aims}
+\begin{enumerate}
+    \item Reproduce and test the nonlinear correlation algorithm using STOR-M Langmuir probe data and synthetic coupled oscillator models.
+    \item Explore links between nonlinear correlation, transfer entropy, and stochastic transport models such as continuous-time random walks. 
+    \item Develop a minimal Python implementation of the algorithm based on legacy MATLAB codes. In addition, if possible, port all relevant MATLAB code to Python.
+\end{enumerate}
+
+\section*{Method and Timeline}
+\begin{itemize}
+	\item Phase 1 (Nov--Dec): Validate the algorithm numerically and with existing STOR-M datasets.  
+	\item Phase 2 (Jan--Mar): Compute nonlinear directionality $S_{xy}$ from the data from various experiments and compare it with the standard linear cross-correlation. Check if the direction or strength of correlation changes over different time windows.	
+	\item Phase 3 (Mar--Apr): Interpret results in a stochastic framework and compare with information-theoretic analyses.
+\end{itemize}
+
+
+\section*{Expected Outcome}
+The study should clarify how nonlinear correlation measures relate to stochastic models of transport and provide a simple computational tool for analyzing fluctuations in fusion plasmas.
+
+\section*{Preliminary References}
+\begin{itemize}
+    \item W.\ X.\ Ding \textit{et al.}, \textit{Phys.\ Rev.\ Lett.} \textbf{79}, 2458 (1997).
+    \item H.\ Bsharat \textit{et al.}, \textit{Radiation Effects \& Defects in Solids} \textbf{179}, 1527 (2024).
+    \item B.\ van Milligen \textit{et al.}, \textit{Entropy} \textbf{21}, 148 (2019).
+\end{itemize}
+
+\end{document}

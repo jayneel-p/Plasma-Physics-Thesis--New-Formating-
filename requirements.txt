@@ -1,0 +1,17 @@
+A.dat/B.dat  ──►  io.load_pair
+                    │
+             	parameters (.inp)
+                    ▼
+           dispersion.conditional_dispersion
+                    │
+             metrics.normalize_curves
+                    │
+             metrics.find_eps90
+                    │
+             metrics.compute_metrics
+                    │
+       ┌────────────┴─────────────┐
+       ▼                          ▼
+   io.write_dat               io.write_par
+       │                          │
+       └──────► panels.plot_xy_yx ─┘

@@ -1,0 +1,19 @@
+1             ! number of file pairs (input1, input2, output)
+b.dat         ! input file 1
+a.dat         ! input file 1
+test_BA        ! output file name (file type may change)
+2000          ! data length
+3             ! delay tau (integer)
+-5            ! min log2(epsilon)         
+2             ! max log2(epsilon)
+70            ! number of epsilons
+1             ! steps of epsilon 
+1             ! minimum dimension 
+9             ! maximum dimension 
+2             ! delta d
+9             ! dM Maximun embedded dimension
+100           ! start time
+105           ! end time
+10            ! time step 
+21            ! cal1  
+21            ! cal2 

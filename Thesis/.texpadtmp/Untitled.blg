@@ -1,0 +1,15 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is '/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Untitled.blg'
+[27] biber-darwin:340> INFO - === Sun Nov  9, 2025, 16:53:23
+[38] Biber.pm:420> INFO - Reading '/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Untitled.bcf'
+[64] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
+[70] Biber.pm:4463> INFO - Processing section 0
+[74] Biber.pm:4654> INFO - Looking for bibtex file '/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib' for section 0
+[75] bibtex.pm:1713> INFO - LaTeX decoding ...
+[78] bibtex.pm:1519> INFO - Found BibTeX data source '/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib'
+[92] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[92] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[92] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[92] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[95] bbl.pm:676> INFO - Writing '/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Untitled.bbl' with encoding 'UTF-8'
+[95] bbl.pm:779> INFO - Output to /Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Untitled.bbl

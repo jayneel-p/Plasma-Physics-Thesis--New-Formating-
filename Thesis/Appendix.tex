@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{Plasma_Thesis.bib}
+\onehalfspacing
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{remark}{Remark}
+
+%----- Title Shit (edit these) -----
+\newcommand{\coursename}{Appendix - Non-Linear Cross Correlation for Magnetically Confined High-Temperature Plasmas}
+\newcommand{\name}{Jayneel Parikh (rfh208, 11410606)}
+\newcommand{\dateissued}{\today}
+
+%----- Title -----
+\title{\coursename}
+\author{
+  \name \\[4pt]
+  \normalsize Under the supervision of Dr.~C.~Xiao \\[-2pt]
+  \normalsize \textit{Department of Physics and Engineering Physics, University of Saskatchewan}
+}
+\date{\dateissued}
+
+
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Motivation and Overview}
+
+Experimental energy confinement times in magnetically confined plasmas are orders of magnitude shorter than classical or neoclassical collisional theory predicts. This excess transport, called \emph{anomalous transport}, is attributed to turbulence from drift-wave instabilities. 
+
+Plasma turbulence is nonlinear, non-Gaussian, and self-organized. Standard linear correlation tools assume weak coupling and Gaussian statistics, which fails to capture turbulent structures (analogous to eddies) that operate on scales much larger than local turbulence theory predicts. This motivates \textbf{nonlinear correlation methods}: Ding \textit{et al.} \cite{dingNonlinearRadialCorrelation1997} introduced conditional dispersion analysis for STOR-M tokamak; Bsharat \textit{et al.} \cite{bsharatConditionalCrosscorrelationAnalysis2024} extended it to TJ-II stellarator and EAST.
+
+This appendix provides theoretical context for understanding these papers.
+
+\section*{2. Transport Regimes in Plasmas}
+
+\subsection*{2.1 Classical diffusion}
+
+In a plasma without a magnetic field, diffusion arises from random walks due to Coulomb collisions. 
+Each collision displaces a particle by roughly the mean free path $\lambda_m$, giving the diffusion coefficient
+\[
+D \sim v_{\text{th}}^2 \tau = \frac{\lambda_m^2}{\tau},
+\]
+where $v_{\text{th}}$ is the thermal velocity and $\tau = \nu^{-1}$ the collision time. 
+
+When a magnetic field $\mathbf{B}$ is present, charged particles gyrate about field lines with Larmor radius
+\[
+\rho_L = \frac{v_\perp}{\omega_c} = \frac{m v_\perp}{qB},
+\]
+where $\omega_c = qB/m$ is the cyclotron frequency. 
+In the absence of collisions, cross-field diffusion vanishes because guiding centers remain tied to their field lines.  
+However, collisions randomize the gyro-phase, causing the guiding center to shift by approximately $\rho_L$ per collision. 
+The result is a random walk in the direction perpendicular to $\mathbf{B}$ with step length $\rho_L$ and step time $\tau$, giving the **classical cross-field diffusion coefficient**
+\[
+D_\perp = \frac{K T \nu}{m \omega_c^2}
+        = \nu \rho_L^2
+        \propto \frac{\nu}{B^2}.
+\]
+(Chen, *Introduction to Plasma Physics and Controlled Fusion*, §5.5, Eq. 5.54–5.56).  
+
+By contrast, diffusion parallel to the field retains the unmagnetized form
+\[
+D_\parallel = \frac{K T}{m \nu}.
+\]
+Hence, while collisions inhibit transport along $B$, they are required for transport across $B$.  
+Increasing $B$ reduces $\rho_L$ and thus $D_\perp$, improving confinement.  
+Classical diffusion therefore represents the purely collisional limit of plasma transport, forming the baseline against which neoclassical and anomalous (turbulent) diffusion are compared \cite{chenIntroductionPlasmaPhysics2016}.
+
+\subsection*{2.2 Neoclassical corrections}
+
+Toroidal geometry (tokamaks, stellarators) introduces magnetic curvature and "banana" trapped-particle orbits. This modifies the effective step size, yielding neoclassical diffusion $D_{\text{neo}} > D_{\text{class}}$, but still far below experimental values.
+
+\subsection*{2.3 Anomalous transport}
+
+Measured transport $D_{\text{exp}}$ exceeds $D_{\text{neo}}$ by 1–2 orders of magnitude. This \emph{anomalous transport} is driven by drift-wave turbulence: fluctuations in $n$, $\phi$, and $T$ generate cross-field $E\times B$ flows. Turbulent eddies enhance radial mixing. 
+
+Strong shear in the poloidal $E\times B$ flow can tear apart eddies, suppressing turbulence and triggering improved confinement (H-mode). Understanding this transition requires tools that capture nonlinear, directional energy transfer.
+
+\section*{3. Nonlinear Correlation: Theory}
+
+\subsection*{3.1 Why linear correlation fails}
+
+Linear cross-correlation, written as the inner product in $L^2$ space, 
+\[
+C_{xy}(\tau)=\frac{\langle x(t)y(t+\tau)\rangle}{\sqrt{\langle x^2\rangle\langle y^2\rangle}}
+\]
+measures phase coherence. However, $C_{xy}=0$ does not imply independence unless distributions are Gaussian. A direct quote from Ding \textit{et al.} 
+
+\begin{quotation}
+	First, in a complex nonlinear system (e.g., brain, fusion plasmas), linear independence between two variables does not mean that two variables (or subsystems) are independent [2] unless their probability density distribution is Gaussian. Plasma turbulence observed in high density plasma exhibits non-Gaussian statistics [3]. Second, a global mode [4] (self-organized criticality mode [5]) is proposed to explain the transport dynamics in a tokamak, and there is some experimental evidence [6,7] to support the existence of the global mode. However, the correlation length of local fluctuations estimated from the conventional correlation technique is much smaller than that expected. Third, the standard correlator requires statistical averaging over a long time period which is sometimes difficult because of changes in discharge parameters, and it is unable to reveal a causality relation.
+\end{quotation}
+ 
+ \begin{remark}
+ 	References present in quote are direct references from Ding's paper.  \cite{dingNonlinearRadialCorrelation1997}
+ \end{remark}
+ 
+\subsection*{3.2\;Phase–space reconstruction and conditional dispersion}
+
+Ding \textit{et al.} (1997) use standard delay–embedding to reconstruct state–space from a scalar signal. Given a time series \(x(t)\), form delay vectors
+\[
+X_i^{(M)}=\frac{1}{\sqrt{M}}\,(x_i,\,x_{i+m},\,\dots,\,x_{i+(M-1)m}),
+\]
+where \(m\) is an integer delay (chosen near the autocorrelation time) and \(M\) is the embedding dimension. For sufficiently large \(M\), this reconstruction preserves the geometry of the underlying attractor \cite{takensDetectingStrangeAttractors1981}. A concise modern treatment is given by Gutman (2016).
+
+For two signals \(x(t)\) and \(y(t)\), construct embeddings \(\{X_i^{(M)}\}\) and \(\{Y_i^{(M)}\}\). If the two signals are dynamically related, points that are close in \(X\)-space remain close in \(Y\)-space. If they are independent, distances in \(Y\)-space are unrelated to proximity in \(X\)-space.
+
+\paragraph{Conditional dispersion.}
+Define
+\[
+\sigma^{M}_{xy}(\varepsilon)=
+\sqrt{
+\frac{\sum_{i\neq j} |Y_i^{(M)}-Y_j^{(M)}|^{2}\,
+H(\varepsilon-|X_i^{(M)}-X_j^{(M)}|)}
+{\sum_{i\neq j} H(\varepsilon-|X_i^{(M)}-X_j^{(M)}|)}
+},
+\]
+where \(H\) is the Heaviside function. Small \(\varepsilon\) selects neighbours in the reconstructed \(X\)-attractor.
+
+Let \(\varepsilon_{90}\) satisfy \(\sigma(\varepsilon_{90})=0.9\,\sigma_{\max}\), and let
+\[
+\varepsilon_{\max}=\max_{i,j}|X_i^{(M)}-X_j^{(M)}|.
+\]
+The nonlinear correlation coefficient is
+\[
+g_{xy}=\lim_{M\to\infty}\frac{\varepsilon_{90}}{\varepsilon_{\max}}.
+\]
+In practice, saturation occurs for \(M\simeq 7\!-\!9\), consistent with Ding \textit{et al.} (1997).
+
+\paragraph{Directional asymmetry.}
+Non-reciprocity of \(g_{xy}\) and \(g_{yx}\) indicates direction:
+\[
+S_{xy}=\frac{g_{xy}-g_{yx}}{g_{xy}+g_{yx}}.
+\]
+Under this sign convention, \(S_{xy}>0\) means \(x\to y\), and \(S_{xy}<0\) means \(y\to x\).
+
+This is the complete algorithm used in Ding \textit{et al.} (1997) for determining nonlinear correlation strength and propagation direction.
+
+
+\subsection*{3.3 Algorithm validation}
+
+Ding \textit{et al.} tested the algorithm on coupled Van der Pol oscillators with known master-slave relationships. For coupling coefficients $a$, $b$: 
+\begin{itemize}
+\item $|a|>|b|$: $g_{xy}>g_{yx}$ (oscillator $x$ drives $y$)
+\item $|a|<|b|$: $g_{xy}<g_{yx}$ (oscillator $y$ drives $x$)
+\item $|a|=|b|$: $g_{xy}=g_{yx}$ (symmetric coupling)
+\end{itemize}
+The method correctly identified causality and highlights master-slave relations -- an improved feature of the non-linear correlator. Noise robustness was verified up to 10\% Gaussian noise amplitude. Ding \textit{et al.} notes that the algorithm is applicable for experimental data which may include a noise level less than 5$\%$. 
+
+\section*{4. Experimental Applications}
+
+\subsection*{4.1 STOR-M Tokamak (Ding \textit{et al.}, 1997)}
+
+STOR-M (Saskatchewan, $R=46$ cm, $a=12$ cm) underwent electrode-biased L–H transitions. Langmuir probes measured floating potential $\tilde{V}_f$ at two radial positions ($\Delta r$ separation) during Ohmic discharges with $B_T \sim 0.7$ T, $I_p=20$ kA, $\bar{n}_e=10^{19}$ m$^{-3}$.
+
+\textbf{Key findings:}
+\begin{itemize}
+\item \textbf{L-mode:} $s_{xy}=+0.16\pm0.06$ (outward propagation from inner to outer radius)
+\item \textbf{H-mode:} $s_{xy}=-0.11\pm0.08$ (inward propagation—reversal coincides with H$_\alpha$ drop, density rise, improved confinement)
+\item \textbf{Nonlinear correlation length:} $\ell_n \approx 2$ cm, four times larger than linear correlation length $\ell_{\text{lin}} \approx 0.5$ cm
+\item \textbf{Radial scale:} $\ell_n/a \sim 0.17$ (mesoscale, $\gg \rho_s \sim 1$ mm but $< a$)
+\end{itemize}
+
+Decorrelation times: $\tau_D^L \sim 10~\mu$s (L-mode), $\tau_D^H \sim 30~\mu$s (H-mode). Using $D \sim \ell_n^2/\tau_D$:
+\[
+\frac{D_H}{D_L} \sim \frac{(\ell_n^H)^2/\tau_D^H}{(\ell_n^L)^2/\tau_D^L} \sim \frac{(1.85)^2/30}{(2.0)^2/10} \approx 0.25,
+\]
+consistent with measured transport reduction in H-mode. This demonstrates that $\ell_n$ captures spatial scale of turbulent structures, but confinement improvement results from increased $\tau_D$ (slowed turbulent dynamics), not spatial decorrelation.
+
+\subsection*{4.2 TJ-II Stellarator (Bsharat \textit{et al.}, 2024)}
+
+TJ-II (Madrid, $R_0=1.5$ m, low magnetic shear stellarator) experiments used rake probe array measuring floating potential at radially separated pins (LOP105, LOP106) during electrode biasing ($-350$ V). Analysis used $M=9$ embedding dimension, 4000-point datasets.
+
+\textbf{Results ($\tilde{V}_{fl3}$, $\tilde{V}_{fl2}$ probe pair):}
+
+\begin{center}
+\begin{tabular}{llll}
+\hline
+Time (ms) & Conditions & $S_{\tilde{V}_{fl3},\tilde{V}_{fl2}}$ & Propagation \\
+\hline
+1105, 1180 & No bias, no NBI & $-0.22$, $-0.04$ & Outward \\
+1090, 1165 & $-350$ V bias & $+0.52$, $+0.37$ & Inward \\
+\hline
+\end{tabular}
+\end{center}
+
+Direction reversal confirms STOR-M finding: improved confinement correlates with inward turbulence energy propagation. This holds across different device geometries (axisymmetric tokamak vs. 3D stellarator), suggesting universal L–H physics.
+
+\subsection*{4.3 Transfer entropy and complementary methods}
+
+Van Milligen \textit{et al.} developed parallel approach using \textbf{transfer entropy} $T_{Y\to X}$ (information-theoretic measure quantifying bits of improved prediction of signal $X$ using history of signal $Y$). Like conditional dispersion, transfer entropy is nonlinear and directional; unlike cross-correlation, it is insensitive to waveform deformation during propagation.
+
+Applied to TJ-II, W7-X stellarator, and JET tokamak ECE data, transfer entropy revealed:
+\begin{itemize}
+\item \textbf{Minor transport barriers:} localized regions near low-order rational magnetic surfaces ($q=m/n$) where turbulence suppression occurs
+\item \textbf{Trapping zones:} adjacent regions where turbulent vortices trap propagating heat
+\item \textbf{"Jumping" behavior:} heat perturbations appearing at outer radii without detectable passage through intermediate positions—analogous to extended $\ell_n$ in Ding's analysis
+\item \textbf{Power degradation mechanism:} at higher heating power, jumping intensifies. Continuous-time random walk (CTRW) interpretation reveals two transport channels:
+  \begin{itemize}
+  \item \emph{Slow channel:} diffusive, trapped by barriers ($\sim$ standard random walk)
+  \item \emph{Fast channel:} ballistic jumps over barriers ($\sim$ Lévy flights)
+  \end{itemize}
+  Increased drive enhances fast channel, causing energy confinement time $\tau_E \propto P^{-0.6}$ (power degradation observed across tokamaks and stellarators).
+\end{itemize}
+
+\textbf{Conceptual link:} Conditional dispersion (Ding) and transfer entropy (van Milligen) both capture nonlinear, directional coupling beyond linear statistics; they form a methadology for diagnosing causality in turbulent transport.
+
+\section*{5. Physical Interpretation}
+
+\subsection*{5.1 Correlation length and diffusivity}
+
+Turbulent transport scaling: $D \sim \ell^2/\tau_D$, where $\ell$ is correlation length and $\tau_D$ is decorrelation time. Nonlinear correlation length $\ell_n$ captures spatial scale of coherent turbulent structures (typically mesoscale: $\rho_s \ll \ell_n \ll a$). 
+
+However, large $\ell_n$ does not automatically imply large $D$. During STOR-M L–H transition, $\ell_n$ decreased modestly ($2.0 \to 1.85$ cm) while $\tau_D$ increased threefold ($10 \to 30~\mu$s), yielding $D_H \approx 0.25\,D_L$. Confinement improvement results from slowed turbulent dynamics ($\tau_D \uparrow$), not reduced spatial correlation.
+
+Ding \textit{et al.} connected $\ell_n$ to Kolmogorov–Sinai entropy (sum of positive Lyapunov exponents $\sum \lambda_i^+$). For STOR-M data: $D \sim L^2 S$, where $L=\sqrt{D/S}$ and $S=\sum\lambda_i^+$ is system entropy. Estimated $L \sim 3$ cm, order-of-magnitude consistent with $\ell_n$. This links microscopic chaos (Lyapunov exponents) to macroscopic transport (diffusion).
+
+\subsection*{5.2 Directionality and L–H transitions}
+
+Asymmetry $S_{xy}$ distinguishes energy flow direction, impossible for symmetric linear correlators. 
+
+\textbf{L-mode} ($S_{xy} > 0$ outward): turbulent eddies convect fluctuation energy radially outward, enhancing losses. Edge fluctuations are high-amplitude, broad-spectrum.
+
+\textbf{H-mode} ($S_{xy} < 0$ inward): edge shear layer (from $E\times B$ flow) reflects or absorbs turbulence, reversing energy propagation. Fluctuations suppress, transport drops. The inward correlation indicates edge-localized energy absorption, not bulk inward flow (density/temperature gradients still outward).
+
+This directional signature provides diagnostic for confinement regime identification and L–H transition timing \cite{vanmilligenCausalityDetectionTurbulence2013}.
+
+\section*{6. Summary}
+
+\begin{enumerate}
+\item \textbf{Context:} Classical/neoclassical transport underestimates $D$ by orders of magnitude. Anomalous transport is turbulent, nonlinear, non-Gaussian.
+\item \textbf{Limitation:} Linear correlation assumes Gaussian statistics, provides no causality information, misses long-range coupling.
+\item \textbf{Solution:} Phase-space embedding (Takens) + conditional dispersion reconstructs dynamics from time series, quantifying correlation strength ($g_{xy}$) and direction ($S_{xy}$).
+\item \textbf{Experimental validation:} 
+   \begin{itemize}
+   	\item STOR-M: $\ell_n = 4\ell_{\text{lin}}$; direction reversal at L–H transition
+   	\item TJ-II: confirms reversal in stellarator geometry
+   	\item Transfer entropy (van Milligen): reveals minor barriers, jumping, dual transport channels
+   \end{itemize}
+\end{enumerate}
+
+%\textbf{Key insight:} Turbulent transport involves competing mechanisms (slow/diffusive vs. fast/ballistic). Relative importance shifts with drive strength. Single-diffusion-coefficient models cannot capture this. Nonlinear correlation and transfer entropy provide framework for identifying direction and scale of turbulent energy exchange, essential for understanding anomalous transport and confinement transitions.
+
+\printbibliography
+
+\end{document}

@@ -1,0 +1,65 @@
+Number of file pairs       :     1
+First file                 :     A.dat
+Second file                :     B.dat
+File name                  :     test_AB
+data length                :     2000
+Delay tau                  :     3
+Minimum of log2(epsilon)   :     -5
+Maximum of log2(epsilon)   :     -1
+Number of epsilon          :     70
+Epsilon step               :     1
+Minimum dimension          :     5
+Maximum dimension          :     11
+Delta d                    :     2
+dM                         :     11
+time begin(ms)             :     100
+time end(ms)               :     105
+tstep(ms)                  :     10
+Cal1                       :     21
+Cal2                       :     21
+
+
+Dimension=5 
+File X: A.dat            File Y:  B.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+0.201062        0.033826        0.226431        0.033826        
+EpsXX= 2.082824E-01             EpsXY=  2.825250E-02
+EpsYY= 2.270278E-01             EpsYX=  8.407250E-03
+Gxy=EXY/sqrt(EXX EYY)=    1.299245E-01
+Gyx=EYX/sqrt(EXX EYY)=    3.866234E-02
+Sxy=(EYX-EXY)/(EXY+EYX)=  -5.413363E-01
+
+Dimension=7 
+File X: A.dat            File Y:  B.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+0.226431        0.046437        0.245098        0.036615        
+EpsXX= 2.265616E-01             EpsXY=  4.730541E-02
+EpsYY= 2.475746E-01             EpsYX=  3.767593E-02
+Gxy=EXY/sqrt(EXX EYY)=    1.997398E-01
+Gyx=EYX/sqrt(EXX EYY)=    1.590808E-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  -1.133129E-01
+
+Dimension=9 
+File X: A.dat            File Y:  B.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+0.235579        0.066326        0.265303        0.066326        
+EpsXX= 2.434255E-01             EpsXY=  6.827228E-02
+EpsYY= 2.657634E-01             EpsYX=  6.658535E-02
+Gxy=EXY/sqrt(EXX EYY)=    2.684193E-01
+Gyx=EYX/sqrt(EXX EYY)=    2.617870E-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  -1.250902E-02
+
+Dimension=11 
+File X: A.dat            File Y:  B.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+0.255000        0.084119        0.276022        0.087517        
+EpsXX= 2.589986E-01             EpsXY=  8.538250E-02
+EpsYY= 2.822159E-01             EpsYX=  8.998224E-02
+Gxy=EXY/sqrt(EXX EYY)=    3.158126E-01
+Gyx=EYX/sqrt(EXX EYY)=    3.328261E-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  2.622956E-02
+
