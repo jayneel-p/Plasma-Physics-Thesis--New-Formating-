@@ -18,113 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{bsharatConditionalCrosscorrelationAnalysis2024}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=7b3aa5c0f3775adef4a8dc6497e41fc3}{%
-           family={Bsharat},
-           familyi={B\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-        {{hash=4c683c4238e43bb3c5f6bb966ae6a43d}{%
-           family={Voldiner},
-           familyi={V\bibinitperiod},
-           given={Igor},
-           giveni={I\bibinitperiod}}}%
-        {{hash=ad869b9606e8aff10b723063dae7dfd3}{%
-           family={Van\bibnamedelima Milligen},
-           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={B.\bibnamedelimi Ph.},
-           giveni={B\bibinitperiod\bibinitdelim Ph\bibinitperiod\bibinitdelim \bibinitperiod}}}%
-        {{hash=9886a867b42f85ab5285975f898eb836}{%
-           family={Xiao},
-           familyi={X\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{5cb568ec589e96d04701939b57b809e1}
-      \strng{fullhash}{5e4799b2899dacc6bee2370aea6fe4a0}
-      \strng{fullhashraw}{5e4799b2899dacc6bee2370aea6fe4a0}
-      \strng{bibnamehash}{5cb568ec589e96d04701939b57b809e1}
-      \strng{authorbibnamehash}{5cb568ec589e96d04701939b57b809e1}
-      \strng{authornamehash}{5cb568ec589e96d04701939b57b809e1}
-      \strng{authorfullhash}{5e4799b2899dacc6bee2370aea6fe4a0}
-      \strng{authorfullhashraw}{5e4799b2899dacc6bee2370aea6fe4a0}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1042-0150, 1029-4953}
-      \field{journaltitle}{Radiation Effects and Defects in Solids}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{number}{11--12}
-      \field{shortjournal}{Radiation Effects and Defects in Solids}
-      \field{title}{Conditional Cross-Correlation Analysis of Floating Potential Fluctuations in the {{TJ-II}} Stellarator}
-      \field{urlday}{9}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{volume}{179}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1527\bibrangedash 1532}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1080/10420150.2024.2434503
-      \endverb
-      \verb{urlraw}
-      \verb https://www.tandfonline.com/doi/full/10.1080/10420150.2024.2434503
-      \endverb
-      \verb{url}
-      \verb https://www.tandfonline.com/doi/full/10.1080/10420150.2024.2434503
-      \endverb
-    \endentry
-    \entry{chenIntroductionPlasmaPhysics2016}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=a5b8b2e287cbcd596b1a245e40c69dd9}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Francis\bibnamedelima F.},
-           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cham}%
-      }
-      \list{publisher}{1}{%
-        {Springer International Publishing}%
-      }
-      \strng{namehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{fullhash}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{fullhashraw}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{bibnamehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{authorbibnamehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{authornamehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{authorfullhash}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \strng{authorfullhashraw}{a5b8b2e287cbcd596b1a245e40c69dd9}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-319-22308-7 978-3-319-22309-4}
-      \field{langid}{english}
-      \field{title}{Introduction to {{Plasma Physics}} and {{Controlled Fusion}}}
-      \field{urlday}{12}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-319-22309-4
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/978-3-319-22309-4
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/978-3-319-22309-4
-      \endverb
-    \endentry
+  \datalist[entry]{none/global//global/global/global}
     \entry{dingNonlinearRadialCorrelation1997}{article}{}{}
       \name{author}{5}{}{%
         {{hash=e1a28bbd6919817aa361e5aa44874e19}{%
@@ -156,30 +50,22 @@
       \strng{namehash}{b10fbe95d361d5235d752f63283f396a}
       \strng{fullhash}{50d0f2f56ca54e557fe1347d03ba4e1e}
       \strng{fullhashraw}{50d0f2f56ca54e557fe1347d03ba4e1e}
-      \strng{bibnamehash}{b10fbe95d361d5235d752f63283f396a}
-      \strng{authorbibnamehash}{b10fbe95d361d5235d752f63283f396a}
+      \strng{bibnamehash}{50d0f2f56ca54e557fe1347d03ba4e1e}
+      \strng{authorbibnamehash}{50d0f2f56ca54e557fe1347d03ba4e1e}
       \strng{authornamehash}{b10fbe95d361d5235d752f63283f396a}
       \strng{authorfullhash}{50d0f2f56ca54e557fe1347d03ba4e1e}
       \strng{authorfullhashraw}{50d0f2f56ca54e557fe1347d03ba4e1e}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{29}
       \field{issn}{0031-9007, 1079-7114}
       \field{journaltitle}{Physical Review Letters}
       \field{langid}{english}
-      \field{month}{9}
       \field{number}{13}
       \field{shortjournal}{Phys. Rev. Lett.}
       \field{title}{Nonlinear {{Radial Correlation}} of {{Electrostatic Fluctuations}} in the {{STOR-M Tokamak}}}
-      \field{urlday}{9}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
       \field{volume}{79}
-      \field{year}{1997}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{2458\bibrangedash 2461}
       \range{pages}{4}
       \verb{doi}
@@ -191,6 +77,105 @@
       \verb{url}
       \verb https://link.aps.org/doi/10.1103/PhysRevLett.79.2458
       \endverb
+      \warn{\item article entry 'dingNonlinearRadialCorrelation1997' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '1997-09-29' of date field 'date' - ignoring}
+      \warn{\item article entry 'dingNonlinearRadialCorrelation1997' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-09' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{bsharatConditionalCrosscorrelationAnalysis2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7b3aa5c0f3775adef4a8dc6497e41fc3}{%
+           family={Bsharat},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4c683c4238e43bb3c5f6bb966ae6a43d}{%
+           family={Voldiner},
+           familyi={V\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ad869b9606e8aff10b723063dae7dfd3}{%
+           family={Van\bibnamedelima Milligen},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={B.\bibnamedelimi Ph.},
+           giveni={B\bibinitperiod\bibinitdelim Ph\bibinitperiod\bibinitdelim \bibinitperiod}}}%
+        {{hash=9886a867b42f85ab5285975f898eb836}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cb568ec589e96d04701939b57b809e1}
+      \strng{fullhash}{5e4799b2899dacc6bee2370aea6fe4a0}
+      \strng{fullhashraw}{5e4799b2899dacc6bee2370aea6fe4a0}
+      \strng{bibnamehash}{5e4799b2899dacc6bee2370aea6fe4a0}
+      \strng{authorbibnamehash}{5e4799b2899dacc6bee2370aea6fe4a0}
+      \strng{authornamehash}{5cb568ec589e96d04701939b57b809e1}
+      \strng{authorfullhash}{5e4799b2899dacc6bee2370aea6fe4a0}
+      \strng{authorfullhashraw}{5e4799b2899dacc6bee2370aea6fe4a0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1042-0150, 1029-4953}
+      \field{journaltitle}{Radiation Effects and Defects in Solids}
+      \field{langid}{english}
+      \field{number}{11--12}
+      \field{shortjournal}{Radiation Effects and Defects in Solids}
+      \field{title}{Conditional Cross-Correlation Analysis of Floating Potential Fluctuations in the {{TJ-II}} Stellarator}
+      \field{volume}{179}
+      \field{pages}{1527\bibrangedash 1532}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1080/10420150.2024.2434503
+      \endverb
+      \verb{urlraw}
+      \verb https://www.tandfonline.com/doi/full/10.1080/10420150.2024.2434503
+      \endverb
+      \verb{url}
+      \verb https://www.tandfonline.com/doi/full/10.1080/10420150.2024.2434503
+      \endverb
+      \warn{\item article entry 'bsharatConditionalCrosscorrelationAnalysis2024' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2024-11' of date field 'date' - ignoring}
+      \warn{\item article entry 'bsharatConditionalCrosscorrelationAnalysis2024' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-09' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{chenIntroductionPlasmaPhysics2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a5b8b2e287cbcd596b1a245e40c69dd9}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Francis\bibnamedelima F.},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{fullhash}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{fullhashraw}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{bibnamehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{authorbibnamehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{authornamehash}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{authorfullhash}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \strng{authorfullhashraw}{a5b8b2e287cbcd596b1a245e40c69dd9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-22308-7 978-3-319-22309-4}
+      \field{langid}{english}
+      \field{title}{Introduction to {{Plasma Physics}} and {{Controlled Fusion}}}
+      \verb{doi}
+      \verb 10.1007/978-3-319-22309-4
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-319-22309-4
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-319-22309-4
+      \endverb
+      \warn{\item book entry 'chenIntroductionPlasmaPhysics2016' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2016' of date field 'date' - ignoring}
+      \warn{\item book entry 'chenIntroductionPlasmaPhysics2016' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-12' of date field 'urldate' - ignoring}
     \endentry
     \entry{takensDetectingStrangeAttractors1981}{incollection}{}{}
       \name{author}{1}{}{%
@@ -230,20 +215,14 @@
       \strng{editornamehash}{c6c1a6552a2bbe6f3c578bc492322502}
       \strng{editorfullhash}{c6c1a6552a2bbe6f3c578bc492322502}
       \strng{editorfullhashraw}{c6c1a6552a2bbe6f3c578bc492322502}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Dynamical {{Systems}} and {{Turbulence}}, {{Warwick}} 1980}
       \field{isbn}{978-3-540-11171-9 978-3-540-38945-3}
       \field{title}{Detecting Strange Attractors in Turbulence}
-      \field{urlday}{12}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
       \field{volume}{898}
-      \field{year}{1981}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \field{pages}{366\bibrangedash 381}
       \range{pages}{16}
       \verb{doi}
@@ -255,6 +234,8 @@
       \verb{url}
       \verb http://link.springer.com/10.1007/BFb0091924
       \endverb
+      \warn{\item incollection entry 'takensDetectingStrangeAttractors1981' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '1981' of date field 'date' - ignoring}
+      \warn{\item incollection entry 'takensDetectingStrangeAttractors1981' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-12' of date field 'urldate' - ignoring}
     \endentry
     \entry{vanmilligenCausalityDetectionTurbulence2013}{article}{}{}
       \name{author}{6}{}{%
@@ -297,24 +278,18 @@
       \strng{namehash}{42e8a162891fbe42b2aca0744706e903}
       \strng{fullhash}{cf55e60dff40cb5a044682f7229966a9}
       \strng{fullhashraw}{cf55e60dff40cb5a044682f7229966a9}
-      \strng{bibnamehash}{42e8a162891fbe42b2aca0744706e903}
-      \strng{authorbibnamehash}{42e8a162891fbe42b2aca0744706e903}
+      \strng{bibnamehash}{cf55e60dff40cb5a044682f7229966a9}
+      \strng{authorbibnamehash}{cf55e60dff40cb5a044682f7229966a9}
       \strng{authornamehash}{42e8a162891fbe42b2aca0744706e903}
       \strng{authorfullhash}{cf55e60dff40cb5a044682f7229966a9}
       \strng{authorfullhashraw}{cf55e60dff40cb5a044682f7229966a9}
-      \field{sortinit}{v}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This work explores the potential of an information-theoretical causality detection method for unraveling the relation between fluctuating variables in complex nonlinear systems. The method is tested on some simple though nonlinear models, and guidelines for the choice of analysis parameters are established. Then, measurements from magnetically confined fusion plasmas are analyzed. The selected data bear relevance to the all-important spontaneous confinement transitions often observed in fusion plasmas, fundamental for the design of an economically attractive fusion reactor. It is shown how the present method is capable of clarifying the interaction between fluctuating quantities such as the turbulence amplitude, turbulent flux, and Zonal Flow amplitude, and uncovers several interactions that were missed by traditional methods.}
       \field{title}{Causality Detection and Turbulence in Fusion Plasmas}
-      \field{urlday}{9}
-      \field{urlmonth}{11}
-      \field{urlyear}{2025}
       \field{version}{3}
-      \field{year}{2013}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.48550/ARXIV.1309.7769
       \endverb
@@ -325,6 +300,8 @@
       \verb https://arxiv.org/abs/1309.7769
       \endverb
       \keyw{FOS: Physical sciences,Plasma Physics (physics.plasm-ph)}
+      \warn{\item article entry 'vanmilligenCausalityDetectionTurbulence2013' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2013' of date field 'date' - ignoring}
+      \warn{\item article entry 'vanmilligenCausalityDetectionTurbulence2013' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-09' of date field 'urldate' - ignoring}
     \endentry
   \enddatalist
 \endrefsection

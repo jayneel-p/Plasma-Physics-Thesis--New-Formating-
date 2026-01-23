@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  25 NOV 2025 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  7 DEC 2025 13:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -490,24 +490,24 @@ Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
  (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.aux)
 \openout1 = `Appendix.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -562,7 +562,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 40.
  (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.out) (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.out)
 \@outlinefile=\write4
 \openout4 = `Appendix.out'.
@@ -579,14 +579,65 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Appendix.bbl' found.
- (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.bbl)
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+ (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'dingNonlinearRadialCorrelation1997':
+(biblatex)                - article entry 'dingNonlinearRadialCorrelation1997' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '1997-09-29' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'dingNonlinearRadialCorrelation1997':
+(biblatex)                - article entry 'dingNonlinearRadialCorrelation1997' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-09' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'bsharatConditionalCrosscorrelationAnalysis2024':
+(biblatex)                - article entry 'bsharatConditionalCrosscorrelationAnalysis2024' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2024-11' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'bsharatConditionalCrosscorrelationAnalysis2024':
+(biblatex)                - article entry 'bsharatConditionalCrosscorrelationAnalysis2024' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-09' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'chenIntroductionPlasmaPhysics2016':
+(biblatex)                - book entry 'chenIntroductionPlasmaPhysics2016' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2016' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'chenIntroductionPlasmaPhysics2016':
+(biblatex)                - book entry 'chenIntroductionPlasmaPhysics2016' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-12' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'takensDetectingStrangeAttractors1981':
+(biblatex)                - incollection entry 'takensDetectingStrangeAttractors1981' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '1981' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'takensDetectingStrangeAttractors1981':
+(biblatex)                - incollection entry 'takensDetectingStrangeAttractors1981' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-12' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'vanmilligenCausalityDetectionTurbulence2013':
+(biblatex)                - article entry 'vanmilligenCausalityDetectionTurbulence2013' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2013' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'vanmilligenCausalityDetectionTurbulence2013':
+(biblatex)                - article entry 'vanmilligenCausalityDetectionTurbulence2013' (/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/Plasma_Thesis.bib): Invalid format '2025-11-09' of date field 'urldate' - ignoring.
+
+)
+Package biblatex Info: Reference section=0 on input line 40.
+Package biblatex Info: Reference segment=0 on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -594,7 +645,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (5.22942pt too wide) in paragraph at lines 80--81
+Overfull \hbox (5.22942pt too wide) in paragraph at lines 88--89
 \OT1/cmr/m/n/10.95 Toroidal ge-om-e-try (toka-maks, stel-lara-tors) in-tro-duces mag-netic cur-va-ture and "ba-nana" trapped-
  []
 
@@ -605,7 +656,7 @@ Overfull \hbox (5.22942pt too wide) in paragraph at lines 80--81
 [3]
 
 [4]
-Overfull \hbox (17.3024pt too wide) in paragraph at lines 206--207
+Overfull \hbox (17.3024pt too wide) in paragraph at lines 214--215
 []\OT1/cmr/bx/n/10.95 Power degra-da-tion mech-a-nism: \OT1/cmr/m/n/10.95 at higher heat-ing power, jump-ing in-ten-si-fies. Continuous-
  []
 
@@ -627,15 +678,15 @@ Package logreq Info: Writing requests to 'Appendix.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18156 strings out of 473190
- 313010 string characters out of 5715801
- 1141781 words of memory out of 5000000
- 41188 multiletter control sequences out of 15000+600000
+ 18160 strings out of 473190
+ 313084 string characters out of 5715801
+ 1141996 words of memory out of 5000000
+ 41192 multiletter control sequences out of 15000+600000
  568685 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,10n,93p,982b,1481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,10n,93p,983b,1480s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.pdf" (7 pages, 262764 bytes).
+Output written on "/Users/jayneelparikh/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Scary School Stuff/Plasma Physics Thesis (New Formating)/Thesis/.texpadtmp/Appendix.pdf" (7 pages, 262304 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  142 compressed objects within 2 object streams

@@ -7,7 +7,7 @@
 import numpy as np
 from pathlib import Path
 
-def load_signal(filepath):
+def load_signal(filepath: object) -> object:
     """
     Load a single signal file containing:
       - a header with lines like 'Key=Value'
@@ -170,6 +170,7 @@ def load_inp(filepath):
 
     return cfg
 
+#TEST SCRIPT BELOW, CAN IGNORE
 if __name__ == "__main__":
     A, B = load_pair(folder="../data_converted")
     inp = load_inp("../data_raw/test_cx.inp")

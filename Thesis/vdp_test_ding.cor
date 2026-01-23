@@ -1,0 +1,64 @@
+NLCC Analysis Results
+Input A: x_vdp_ding.dat
+Input B: y_vdp_ding.dat
+N=1000, tau=3, dM=9
+======================================================================
+
+
+Time window: t=990.00 ms (sample 99)
+----------------------------------------------------------------------
+
+Dimension = 1
+File X: x_vdp_ding.dat            File Y:  y_vdp_ding.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+2.753510e-01  3.109175e-02  2.271644e-01  6.404347e-02
+EpsXX= 2.753510e-01             EpsXY=  3.109175e-02
+EpsYY= 2.271644e-01             EpsYX=  6.404347e-02
+Gxy=EXY/sqrt(EXX EYY)=    1.243173e-01
+Gyx=EYX/sqrt(EXX EYY)=    2.560716e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  3.463673e-01
+
+Dimension = 3
+File X: x_vdp_ding.dat            File Y:  y_vdp_ding.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+4.751243e-01  6.595882e-02  3.888131e-01  1.040672e-01
+EpsXX= 4.751243e-01             EpsXY=  6.595882e-02
+EpsYY= 3.888131e-01             EpsYX=  1.040672e-01
+Gxy=EXY/sqrt(EXX EYY)=    1.534613e-01
+Gyx=EYX/sqrt(EXX EYY)=    2.421251e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  2.241327e-01
+
+Dimension = 5
+File X: x_vdp_ding.dat            File Y:  y_vdp_ding.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+6.109667e-01  7.876282e-02  4.960749e-01  1.254781e-01
+EpsXX= 6.109667e-01             EpsXY=  7.876282e-02
+EpsYY= 4.960749e-01             EpsYX=  1.254781e-01
+Gxy=EXY/sqrt(EXX EYY)=    1.430668e-01
+Gyx=EYX/sqrt(EXX EYY)=    2.279217e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  2.287265e-01
+
+Dimension = 7
+File X: x_vdp_ding.dat            File Y:  y_vdp_ding.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+7.202143e-01  8.782501e-02  5.797440e-01  1.375788e-01
+EpsXX= 7.202143e-01             EpsXY=  8.782501e-02
+EpsYY= 5.797440e-01             EpsYX=  1.375788e-01
+Gxy=EXY/sqrt(EXX EYY)=    1.359156e-01
+Gyx=EYX/sqrt(EXX EYY)=    2.129132e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  2.207318e-01
+
+Dimension = 9
+File X: x_vdp_ding.dat            File Y:  y_vdp_ding.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+8.131125e-01  9.537686e-02  6.501884e-01  1.474265e-01
+EpsXX= 8.131125e-01             EpsXY=  9.537686e-02
+EpsYY= 6.501884e-01             EpsYX=  1.474265e-01
+Gxy=EXY/sqrt(EXX EYY)=    1.311741e-01
+Gyx=EYX/sqrt(EXX EYY)=    2.027592e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  2.143696e-01

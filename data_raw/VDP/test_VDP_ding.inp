@@ -1,0 +1,19 @@
+1              !Number of file pairs
+x_vdp_ding.dat      !First file1
+y_vdp_ding.dat      !Second file2
+vdp_test       !Output file name (no extension)
+1000           !data length
+3              !Delay tau
+-4             !Minimum of log2(epsilon)
+1              !Maximum of log2(epsilon)
+70             !Number of epsilon
+1              !Epsilon step
+1              !Minimum dimension
+9              !Maximum dimension
+2              !Delta d
+9              !dM Maximum embedded dimension
+990              !time begin (ms)
+1000          !time end (ms)
+100             !time step (ms)
+21             !Cal1
+21             !Cal2

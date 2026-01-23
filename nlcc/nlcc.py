@@ -1,23 +1,16 @@
 """
-nlcc.py - CORRECTED VERSION
+nlcc.py
+Author: Jayneel Parikh
 
-Nonlinear "conditional cross-correlation" in the sense of
-Ding et al. (1997) and the NC_ASIPP MATLAB/Fortran code.
-
-Goal: produce σ(log2 ε) curves and NLCC metrics (G_xy, G_yx, S_xy)
-that match the original NC_ASIPP outputs to machine precision.
-
-Key implementation choices (all matched to Ding/NC_ASIPP):
-  1. Normalise each TIME WINDOW by its range (divide by range, do NOT subtract min).
-  2. Build delay-embedding vectors with M = tau*(D-1) and use the same
-     pair loops as MATLAB (i < j).
-  3. Compute distances exactly as in the double loop and divide by dM.
-  4. Reproduce the epsilon grid used in NC_ASIPP.
-  5. Interpolate ε at σ = 0.9 using the same piecewise logic as the MATLAB code.
+    -This code is a porting of the MATLAB code written by Vineet (2024).
+    -The file contains the core implementation of NLCC algo developed by Ding et al. (1997).
+    -The runner script is nlcc_run.py which then outputs similar graphs as Vineets's Matlab implementation.
+    -The code was run against the HT7 data set (A.dat, B.dat, test_AB.inp) and generated exact results.
+        up to 7 decimal places. The resulting discrepancies may just be due to floating point errors being accumulated.
+    -An original unmodified copy of the project may be found on my github, along with necessary background papers.
 """
 
 from __future__ import annotations
-
 import numpy as np
 from typing import Literal, Optional, Dict, Tuple
 
@@ -28,14 +21,13 @@ from typing import Literal, Optional, Dict, Tuple
 
 def range_normalize(x: np.ndarray) -> np.ndarray:
     """
-    Range "normalization" used in Ding/NC_ASIPP.
+    Range "normalization" used in NC_ASIPP.
 
     Args:
         x: 1D array-like, time series segment (window).
 
     Returns:
         1D array with entries x / (max(x) - min(x)).
-        Note: we do NOT subtract xmin. This matches NC_ASIPP exactly.
     """
     x = np.asarray(x, dtype=float)
     xmin = np.nanmin(x)
@@ -84,7 +76,7 @@ def embed(ts: np.ndarray, dim: int, tau: int) -> np.ndarray:
         X: array of shape (N_embed, dim) where each row is
            [x_i, x_{i+tau}, ..., x_{i + (dim-1) tau}].
 
-    Ding/NC_ASIPP equivalence:
+    NC_ASIPP equivalence:
         M = tau*(D-1)
         i = 1 : N - M - 1
         j = i+1 : N - M
@@ -102,7 +94,7 @@ def embed(ts: np.ndarray, dim: int, tau: int) -> np.ndarray:
     # Number of valid starting points for embedding.
     N_embed = N - M
 
-    if N_embed <= 1:
+    if N_embed <= 1: #Error check
         raise ValueError("Time series too short for embedding with given dim and tau.")
 
     # Build the embedded matrix by shifting the window by tau each column.
@@ -133,10 +125,11 @@ def _select_pairs(
     Returns:
         (i_idx, j_idx): integer arrays of same length with 0-based indices.
 
-    Ding/NC_ASIPP equivalent:
+    NC_ASIPP equivalent:
         for i = 1 : N-M-1
             for j = i+1 : N-M
     """
+
     if N < 2:
         raise ValueError("Need at least 2 points to form pairs.")
 
@@ -195,7 +188,7 @@ def _mean_square_distances(
         (DX2, DY2): arrays of shape (n_pairs,) with mean squared
         distances for X and Y. We only take sqrt later.
 
-    Ding/NC_ASIPP equivalent (matlab lines 164–170):
+    NC_ASIPP equivalent:
         DX = 0.0; DY = 0.0
         for k = 0 : tau : M
             DX += (AN1(i+k) - AN1(j+k))^2
@@ -265,7 +258,7 @@ def conditional_dispersion_curves(
 
     σ_xx(ε)   : dispersion of X within ε-neighbourhoods in X-space.
     σ_xy(ε)   : dispersion of Y within the same X-conditioned neighbourhoods.
-    σ_yy,σ_yx : same story but conditioning on Y.
+    σ_yy,σ_yx : same as above but conditioning on Y.
     """
     x = np.asarray(x, dtype=float)
     y = np.asarray(y, dtype=float)
@@ -381,7 +374,7 @@ def eps_at_level(
     Returns:
         Scalar ε where σ ≈ level (float, possibly NaN if curve is degenerate).
 
-    Ding/NC_ASIPP equivalent (lines 233–248):
+    NC_ASIPP equivalent (lines 233–248):
         if(SUM1(i,EN) < 0.9)
             k1 = EN; k2 = EN-1
         else
@@ -390,9 +383,6 @@ def eps_at_level(
                     k1 = L-1; k2 = L
         ...
         Eps4(i) = EPS(k1) + (EPS(k2)-EPS(k1))*(0.9-SUM1(i,k1))/(SUM1(i,k2)-SUM1(i,k1))
-
-    Note: there was a bug in an earlier Python version where (e2 - s1) was used.
-    That is fixed here: we correctly use (e2 - e1).
     """
     eps = np.asarray(eps, dtype=float)
     sigma = np.asarray(sigma, dtype=float)
@@ -484,16 +474,15 @@ def nlcc_metrics_from_curves(
         "S_xy": float(S_xy) if np.isfinite(S_xy) else np.nan,
     }
 
-
 # ---------------------------------------------------------------------------
-# Epsilon grid generation (matches MATLAB exactly)
+# Epsilon grid generation
 # ---------------------------------------------------------------------------
 
 def eps_grid_from_inp_matlab(cfg):
     """
     Build the epsilon grid exactly like NC_ASIPP.
 
-    The MATLAB/Fortran code does:
+    The MATLAB code does:
         A = 2^Epsmin
         B = (Epsmax - Epsmin) * log(2) / EN
         EPS(I) = A * exp(B * I),  I = 1:Estep:EN

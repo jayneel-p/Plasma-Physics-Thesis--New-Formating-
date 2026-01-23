@@ -1,0 +1,64 @@
+NLCC Analysis Results
+Input A: x_vdp_vm1.dat
+Input B: y_vdp_vm2.dat
+N=1000, tau=3, dM=9
+======================================================================
+
+
+Time window: t=990.00 ms (sample 99)
+----------------------------------------------------------------------
+
+Dimension = 1
+File X: x_vdp_vm1.dat            File Y:  y_vdp_vm2.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+2.800456e-01  2.402119e-01  2.943236e-01  2.809627e-01
+EpsXX= 2.800456e-01             EpsXY=  2.402119e-01
+EpsYY= 2.943236e-01             EpsYX=  2.809627e-01
+Gxy=EXY/sqrt(EXX EYY)=    8.366960e-01
+Gyx=EYX/sqrt(EXX EYY)=    9.786374e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  7.819028e-02
+
+Dimension = 3
+File X: x_vdp_vm1.dat            File Y:  y_vdp_vm2.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+4.855929e-01  4.172764e-01  5.102439e-01  4.863843e-01
+EpsXX= 4.855929e-01             EpsXY=  4.172764e-01
+EpsYY= 5.102439e-01             EpsYX=  4.863843e-01
+Gxy=EXY/sqrt(EXX EYY)=    8.382985e-01
+Gyx=EYX/sqrt(EXX EYY)=    9.771349e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  7.647559e-02
+
+Dimension = 5
+File X: x_vdp_vm1.dat            File Y:  y_vdp_vm2.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+6.272363e-01  5.400995e-01  6.592203e-01  6.272762e-01
+EpsXX= 6.272363e-01             EpsXY=  5.400995e-01
+EpsYY= 6.592203e-01             EpsYX=  6.272762e-01
+Gxy=EXY/sqrt(EXX EYY)=    8.399296e-01
+Gyx=EYX/sqrt(EXX EYY)=    9.755015e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  7.467753e-02
+
+Dimension = 7
+File X: x_vdp_vm1.dat            File Y:  y_vdp_vm2.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+7.418993e-01  6.402129e-01  7.805593e-01  7.410150e-01
+EpsXX= 7.418993e-01             EpsXY=  6.402129e-01
+EpsYY= 7.805593e-01             EpsYX=  7.410150e-01
+Gxy=EXY/sqrt(EXX EYY)=    8.412964e-01
+Gyx=EYX/sqrt(EXX EYY)=    9.737593e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  7.298007e-02
+
+Dimension = 9
+File X: x_vdp_vm1.dat            File Y:  y_vdp_vm2.dat
+epsilon at which log2(epsilon)=0.9-------------
+XX             XY             YY             YX
+8.412853e-01  7.271466e-01  8.844280e-01  8.395685e-01
+EpsXX= 8.412853e-01             EpsXY=  7.271466e-01
+EpsYY= 8.844280e-01             EpsYX=  8.395685e-01
+Gxy=EXY/sqrt(EXX EYY)=    8.429835e-01
+Gyx=EYX/sqrt(EXX EYY)=    9.733146e-01
+Sxy=(EYX-EXY)/(EXY+EYX)=  7.175645e-02
