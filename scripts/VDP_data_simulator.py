@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 """
 sim_vdp_to_dat.py
 

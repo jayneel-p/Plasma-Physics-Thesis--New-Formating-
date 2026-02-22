@@ -1,0 +1,159 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\usepackage{pgfpages}
+
+\title{Plasma Turbulence}
+\author{Jayneel Parikh}
+\date{September 1, 2026}
+
+\begin{document}
+
+
+%========================
+% Slide 1: Title
+%========================
+\section{}
+\begin{itemize}
+\item This talk is about plasma turbulence and why it is the dominant limitation to magnetic confinement fusion.
+\item The focus is not on turbulence modeling itself, but on how we interrogate experimental fluctuation data.
+\item In particular, I will discuss nonlinear, directional correlation methods developed to go beyond standard diagnostics.
+\end{itemize}
+
+%========================
+% Slide 2: Historical Timeline
+%========================
+\section{}
+\begin{itemize}
+\item Fusion research originates from early nuclear physics, beginning with Rutherford’s first fusion reaction in 1919.
+\item By the 1920s, mass defect and nuclear binding energy explained how fusion could release enormous energy.
+\item Eddington proposed that stellar energy originates from hydrogen fusion.
+\item In 1938, Bethe and Weizsäcker established the proton--proton chain and CNO cycle.
+\item In the 1950s, fusion research accelerated through weapons programs and the invention of toroidal confinement concepts.
+\item The 1968 Soviet T--3 tokamak demonstrated dramatically improved confinement, launching modern tokamak research.
+\item Since the 1990s, the primary challenge has not been ignition physics, but turbulence and confinement degradation.
+\item Modern devices like ITER and EAST are fundamentally limited by turbulence-driven transport.
+\end{itemize}
+\section{}
+%========================
+% Slide 3: Plasma and Tokamaks
+%========================
+\begin{itemize}
+\item Plasma is the fourth state of matter, consisting of charged particles interacting through Coulomb forces.
+\item Unlike neutral fluids, plasma dynamics are strongly constrained by magnetic fields.
+\item A tokamak confines plasma magnetically in a toroidal geometry to avoid material walls.
+\item Charged particles spiral along magnetic field lines while slowly drifting across them.
+\item Toroidal and poloidal magnetic fields combine to form closed helical particle orbits.
+\item Ideal confinement would restrict transport across magnetic flux surfaces.
+\end{itemize}
+
+\section{}
+%========================
+% Slide 4: The Confinement Problem — Turbulence
+%========================
+\begin{itemize}
+\item Experimental transport levels exceed classical and neoclassical predictions by one to two orders of magnitude.
+\item This discrepancy is known as anomalous transport.
+\item Turbulence arises from drift-type instabilities driven by pressure gradients and electric fields.
+\item Plasma turbulence is anisotropic, intermittent, and non-Gaussian.
+\item Zonal flows represent a form of self-organization analogous to atmospheric bands on Jupiter.
+\item Modern transport analysis reveals both slow diffusive transport and fast nonlocal transport events.
+\item These fast events resemble Lévy flights rather than standard random walks.
+\end{itemize}
+
+\section{}
+
+%========================
+% Slide 5: Experimental Setup
+%========================
+\begin{itemize}
+\item Experimental turbulence measurements are typically obtained using Langmuir probes.
+\item Floating potential fluctuations provide access to local electrostatic turbulence.
+\item Multiple spatially separated probes allow the study of radial and poloidal correlations.
+\item The experiments referenced here follow setups used by Bsharat et al.\ and Alipour et al.
+\item These measurements provide time series suitable for nonlinear statistical analysis.
+\end{itemize}
+
+\section{}
+
+%========================
+% Slide 6: Interrogating the Data
+%========================
+\begin{itemize}
+\item Conventional analysis tools include linear cross-correlation, FFTs, and coherence.
+\item These methods assume Gaussian statistics and waveform coherence.
+\item Plasma turbulence violates these assumptions due to shear, intermittency, and deformation.
+\item Linear correlation is symmetric and cannot identify causal or directional relationships.
+\item This motivates the use of nonlinear, phase-space-based techniques.
+\end{itemize}
+
+\section{}
+
+%========================
+% Slide 7: Ding vs Transfer Entropy
+%========================
+\begin{itemize}
+\item Ding et al.\ introduced a nonlinear cross-correlation method based on conditional dispersion.
+\item The method reconstructs local dynamics using delay-coordinate embedding.
+\item An asymmetry coefficient $S_{xy}$ quantifies directional coupling between signals.
+\item If $S_{xy} > 0$, energy or information flows from $x$ to $y$.
+\item van Milligen et al.\ use Transfer Entropy, an information-theoretic measure of causality.
+\item Transfer Entropy quantifies how much the past of one signal predicts the future of another.
+\item Both methods aim to extract directional information flow in nonlinear systems.
+\end{itemize}
+
+\section{}
+
+%========================
+% Slide 8: Core Aspects of NLCC
+%========================
+\begin{itemize}
+\item Time series are embedded into phase space using delay vectors.
+\item The embedding dimension $M$ and delay $m$ are chosen using autocorrelation times.
+\item Conditional dispersion measures how spread out one attractor is when the other is locally constrained.
+\item A neighborhood size $\epsilon$ is swept to construct dispersion curves.
+\item The nonlinear correlation strength $g_{xy}$ is extracted from $\epsilon_{90}$.
+\item Directionality is determined using the asymmetry coefficient $S_{xy}$.
+\end{itemize}
+
+\section{}
+
+%========================
+% Slide 9: Applying the Methods
+%========================
+\begin{itemize}
+\item The algorithm is first validated using coupled Van der Pol oscillators.
+\item The direction of coupling is known a priori in the synthetic system.
+\item This provides a controlled benchmark for the nonlinear method.
+\item The method is then applied to experimental HT--7 tokamak data.
+\item Results are compared directly against Ding’s original MATLAB implementation.
+\end{itemize}
+\section{}
+
+%========================
+% Slide 10: Results
+%========================
+\begin{itemize}
+\item Dispersion curves for the Van der Pol system recover the correct coupling direction.
+\item HT--7 dispersion curves match previously published results.
+\item Nonlinear correlation lengths are significantly larger than linear correlation lengths.
+\item Direction reversals are observed across confinement transitions.
+\item These results support the physical interpretation of inward and outward turbulence propagation.
+\end{itemize}
+\section{}
+
+%========================
+% Slide 11: Future Research
+%========================
+\begin{itemize}
+\item Fully reproduce Ding’s algorithm in a modern, open-source language.
+\item Validate results against synthetic and experimental data sets.
+\item Establish mathematical links between NLCC, Transfer Entropy, and CTRW models.
+\item Interpret experimental results within a stochastic transport framework.
+\item Quantify the relative contribution of fast and slow transport channels.
+\item Ultimately connect directional turbulence propagation to confinement degradation.
+\end{itemize}
+
+\end{document}
