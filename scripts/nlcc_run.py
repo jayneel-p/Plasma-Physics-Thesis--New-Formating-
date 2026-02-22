@@ -1,23 +1,18 @@
 """
-run_nlcc.py - Final corrected runner script
-
-Critical fixes:
-1. I_time is already in samples (multiply by 1000, not divide!)
-2. MATLAB: I_begin = 1000.0 * tbegin (where tbegin is in ms)
-3. Python 0-based indexing: x[I_time:I_time+N] maps to MATLAB's AN((I_time+1):(I_time+N))
+run_nlcc.py - NLCC runner. Run from project root: python scripts/nlcc_run.py
 """
-
-from nlcc.nlcc import range_normalize
-import numpy as np
-import matplotlib.pyplot as plt
+import sys
 from pathlib import Path
 
-from nlcc.io import load_inp, load_signal
-from nlcc.nlcc import (
-    conditional_dispersion_curves,
-    nlcc_metrics_from_curves,
-    eps_grid_from_inp_matlab
-)
+# So nlcc can be imported after cloning (run from any directory)
+_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from nlcc import load_inp, load_signal, range_normalize, conditional_dispersion_curves, nlcc_metrics_from_curves, eps_grid_from_inp_matlab
 
 def run_nlcc_full(inp_path, output_dir="output", plot=True):
     """
@@ -62,9 +57,10 @@ def run_nlcc_full(inp_path, output_dir="output", plot=True):
     dt = float(freq_str)
     print(f"  dt = {dt:.6e} s = {dt*1e6:.3f} µs")
 
-    #BAD EVIL CODE BELOW
-    if inp_path == ("../data_raw/VDP/test_VDP_ding"".inp") or inp_path == ("../data_raw/VDP/test_VDP_vm"".inp") :
-        dt_ms = 1000.0 * dt  # 10 ms for VDP
+    # VDP data: t_begin/t_end in ms -> sample index via dt
+    inp_path_str = str(inp_path)
+    if "VDP" in inp_path_str and ("test_VDP_ding" in inp_path_str or "test_VDP_vm" in inp_path_str):
+        dt_ms = 1000.0 * dt
         I_begin = int(cfg["t_begin"] / dt_ms)
         I_end = int(cfg["t_end"] / dt_ms)
         I_step = int(cfg["t_step"] / dt_ms)
@@ -231,31 +227,30 @@ def plot_results(cfg, output_dir, run_name):
 
 
 if __name__ == "__main__":
-    import sys
-
-    # Default input file
-    inp_path_prompt = str(input('Choose input file (ht7_ab,ht7_ba, vdp_ding, vdp_vm):'))
-    if inp_path_prompt == "ht7_ab":
-        inp_path = ("../data_raw/HT7:EAST/test_AB"".inp")
-    elif inp_path_prompt == "ht7_ba":
-            inp_path = ("../data_raw/HT7:EAST/test_BA"".inp")
-    elif inp_path_prompt == "vdp_ding":
-            inp_path = ("../data_raw/VDP/test_VDP_ding"".inp")
-    elif inp_path_prompt == "vdp_vm":
-        inp_path = ("../data_raw/VDP/test_VDP_vm"".inp")
-    else:
-        print('fat finger day, eh?')
-        exit()
+    DATA = _PROJECT_ROOT / "data_raw"
 
     if len(sys.argv) > 1:
-        inp_path = sys.argv[1]
+        inp_path = Path(sys.argv[1]).resolve()
+    else:
+        inp_path_prompt = input("Choose input file (ht7_ab, ht7_ba, vdp_ding, vdp_vm): ").strip()
+        if inp_path_prompt == "ht7_ab":
+            inp_path = DATA / "HT7:EAST" / "test_AB.inp"
+        elif inp_path_prompt == "ht7_ba":
+            inp_path = DATA / "HT7:EAST" / "test_BA.inp"
+        elif inp_path_prompt == "vdp_ding":
+            inp_path = DATA / "VDP" / "test_VDP_ding.inp"
+        elif inp_path_prompt == "vdp_vm":
+            inp_path = DATA / "VDP" / "test_VDP_vm.inp"
+        else:
+            print("Choose ht7_ab, ht7_ba, vdp_ding, or vdp_vm")
+            sys.exit(1)
 
     print("="*70)
     print("NLCC Runner")
     print("="*70)
 
     print("\nRunning full analysis (all windows, all dimensions)...\n")
-    run_nlcc_full(inp_path, output_dir="output", plot=True)
+    run_nlcc_full(str(inp_path), output_dir=str(_PROJECT_ROOT / "output"), plot=True)
 
     print("\n" + "="*70)
     print("Analysis complete!")

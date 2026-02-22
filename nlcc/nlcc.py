@@ -500,6 +500,22 @@ def eps_grid_from_inp_matlab(cfg):
           eps_vals: 1D array of ε values.
           log2_eps: 1D array log2(ε_vals).
     """
+    return eps_grid_from_config(cfg)
+
+
+def eps_grid_from_config(cfg: dict) -> Tuple[np.ndarray, np.ndarray]:
+    """
+    Build the epsilon grid from a config dict (file-free).
+
+    Same as eps_grid_from_inp_matlab but with a name that reflects
+    that cfg can come from memory, not only from .inp files.
+
+    Args:
+        cfg: dict with keys "log2_eps_min", "log2_eps_max", "eps_N", "eps_step".
+
+    Returns:
+        (eps_vals, log2_eps): 1D arrays.
+    """
     log2_min = cfg["log2_eps_min"]
     log2_max = cfg["log2_eps_max"]
     EN       = cfg["eps_N"]
@@ -508,7 +524,6 @@ def eps_grid_from_inp_matlab(cfg):
     A = 2.0 ** log2_min
     B = (log2_max - log2_min) * np.log(2.0) / EN
 
-    # Note: indices start at 1 (matching MATLAB loop I=1:Estep:EN).
     idx = np.arange(1, EN + 1, step, dtype=float)
     eps_vals = A * np.exp(B * idx)
     log2_eps = np.log2(eps_vals)

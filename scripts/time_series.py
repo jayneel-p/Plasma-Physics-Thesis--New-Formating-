@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-import numpy as np
-import matplotlib.pyplot as plt
+"""NLCC runner with overview plots. Run from project root: python scripts/time_series.py"""
+import sys
 from pathlib import Path
 
-from nlcc.io import load_inp, load_signal
-from nlcc.nlcc import (
-    conditional_dispersion_curves,
-    nlcc_metrics_from_curves,
-    eps_grid_from_inp_matlab
-)
+# Allow importing nlcc when run from repo (e.g. clone from GitHub, run from any dir)
+_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from nlcc import load_inp, load_signal, conditional_dispersion_curves, nlcc_metrics_from_curves, eps_grid_from_inp_matlab
 
 def plot_window_timeseries(t, x, y, dt, cfg, output_dir, run_name, I_begin):
     """
@@ -162,8 +165,9 @@ def run_nlcc_full(inp_path, output_dir="output", plot=True):
     plot_overview_time_and_embedding(t, x, y, dt, cfg, output_dir, cfg["run_name"])
 
     # Time-window indexing
-    # Special-case VDP test to mimic MATLAB's ms-based indexing
-    if inp_path == ("../data_raw/VDP/test_VDP"".inp"):
+    # VDP data: t_begin/t_end in ms, convert to sample index via dt
+    data_dir_str = str(Path(inp_path).resolve().parent)
+    if "VDP" in data_dir_str and "test_VDP" in str(inp_path):
         dt_ms = 1000.0 * dt
         I_begin = int(cfg["t_begin"] / dt_ms)
         I_end = int(cfg["t_end"] / dt_ms)
@@ -328,30 +332,30 @@ def plot_results(cfg, output_dir, run_name):
 
 
 if __name__ == "__main__":
-    import sys
+    # Paths relative to project root so it works after clone (run from repo root)
+    DATA = _PROJECT_ROOT / "data_raw"
 
-    # Default input file selection (interactive prompt)
-    inp_path_prompt = str(input('Choose input file (HT7_AB,HT7_BA, VDP):'))
-    if inp_path_prompt == "HT7_AB":
-        inp_path = ("../data_raw/HT7:EAST/test_AB"".inp")
-    elif inp_path_prompt == "HT7_BA":
-        inp_path = ("../data_raw/HT7:EAST/test_BA"".inp")
-    elif inp_path_prompt == "VDP":
-        inp_path = ("../data_raw/VDP/test_VDP"".inp")
-    else:
-        print('ERROR, choose input file HT7_AB,HT7_BA, VDP')
-        sys.exit(1)
-
-    # Allow override via command-line
+    # CLI overrides path; otherwise prompt for preset
     if len(sys.argv) > 1:
-        inp_path = sys.argv[1]
+        inp_path = Path(sys.argv[1]).resolve()
+    else:
+        inp_path_prompt = input("Choose input file (HT7_AB, HT7_BA, VDP): ").strip()
+        if inp_path_prompt == "HT7_AB":
+            inp_path = DATA / "HT7:EAST" / "test_AB.inp"
+        elif inp_path_prompt == "HT7_BA":
+            inp_path = DATA / "HT7:EAST" / "test_BA.inp"
+        elif inp_path_prompt == "VDP":
+            inp_path = DATA / "VDP" / "test_VDP.inp"
+        else:
+            print("ERROR: choose HT7_AB, HT7_BA, or VDP")
+            sys.exit(1)
 
     print("="*70)
     print("NLCC Runner - with overview plots")
     print("="*70)
 
     print("\nRunning full analysis (all windows, all dimensions)...\n")
-    run_nlcc_full(inp_path, output_dir="output", plot=True)
+    run_nlcc_full(str(inp_path), output_dir=str(_PROJECT_ROOT / "output"), plot=True)
 
     print("\n" + "="*70)
     print("Analysis complete!")
