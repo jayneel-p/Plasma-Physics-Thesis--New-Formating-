@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 from nlcc import load_inp, load_signal, range_normalize, conditional_dispersion_curves, nlcc_metrics_from_curves, eps_grid_from_inp_matlab
 
-def run_nlcc_full(inp_path, output_dir="output", plot=True):
+def run_nlcc_full(inp_path, output_dir="results", plot=True):
     """
     Run full NLCC analysis matching MATLAB behavior exactly.
     """
@@ -250,7 +250,7 @@ if __name__ == "__main__":
     print("="*70)
 
     print("\nRunning full analysis (all windows, all dimensions)...\n")
-    run_nlcc_full(str(inp_path), output_dir=str(_PROJECT_ROOT / "output"), plot=True)
+    run_nlcc_full(str(inp_path), output_dir=str(_PROJECT_ROOT / "results"), plot=True)
 
     print("\n" + "="*70)
     print("Analysis complete!")

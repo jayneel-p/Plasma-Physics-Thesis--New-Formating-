@@ -17,7 +17,7 @@ You can pass an input file path instead of using the prompt:
 python scripts/nlcc_run.py data_raw/VDP/test_VDP_ding.inp
 ```
 
-Output goes to the `output/` directory at the project root.
+Output goes to the `results/` directory at the project root.
 
 ## Use nlcc as a library
 

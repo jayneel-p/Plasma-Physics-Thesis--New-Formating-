@@ -126,7 +126,7 @@ def plot_overview_time_and_embedding(t, x, y, dt, cfg, output_dir, run_name):
     plt.close(fig)
 
 
-def run_nlcc_full(inp_path, output_dir="output", plot=True):
+def run_nlcc_full(inp_path, output_dir="results", plot=True):
     """
     Run full NLCC analysis matching MATLAB behavior as closely as possible.
     Also produces overview plots (short time series and D=2 embedding)
@@ -355,7 +355,7 @@ if __name__ == "__main__":
     print("="*70)
 
     print("\nRunning full analysis (all windows, all dimensions)...\n")
-    run_nlcc_full(str(inp_path), output_dir=str(_PROJECT_ROOT / "output"), plot=True)
+    run_nlcc_full(str(inp_path), output_dir=str(_PROJECT_ROOT / "results"), plot=True)
 
     print("\n" + "="*70)
     print("Analysis complete!")
